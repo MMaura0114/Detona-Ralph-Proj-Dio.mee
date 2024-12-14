@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column ;  
+  height: 100vh;
+  background-image: url("../imagens/parede.jpg");
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 90px;
+    width: 100%;
+    background-color: #130101;
+    color: #f8f4f4;
+    border-bottom: 5px solid #ffd700;
+}
+
+.panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100vh;           /* Altura total da tela */
+    width: 100%;             /* Largura total */
+    margin-top: 0;           /* Remove qualquer margem superior */
+}
+
+
+.square {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #4b4d0d;
+    background-color: #65cba9;
+    margin: 5px;  /* Um pouco de espaço entre as caixas */
+    position: relative;
+}
+
+.enemy {
+    background-image: url("../imagens/download.jpeg");
+    background-size: cover;  /* Garante que a imagem preencha o quadrado sem distorcer */
+    background-position: center; /* Centraliza a imagem dentro do quadrado */
+    
+}
+
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-time h2:nth-child(2), 
+.menu-score h2:nth-child(2) {
+    margin-top: 10px ;
+}
+
+/*reponsibilidade do jogo*/
+@media (max-width: 768px) {
+    .square {
+        height: 100px;
+        width: 100px;
+    }
+    .menu {
+        flex-direction: column;
+        height: auto;
+    }
+}
